@@ -1,5 +1,5 @@
 // O.C.T.A.V.E. demo — minimal offline service worker
-const CACHE = 'octave-demo-v2';
+const CACHE = 'octave-demo-v3';
 const ASSETS = [
   '.', 'index.html', 'styles.css', 'app.js', 'manifest.webmanifest',
   'icon-192.png', 'icon-512.png', 'icon-maskable-512.png', 'apple-touch-icon.png'
@@ -16,15 +16,15 @@ self.addEventListener('activate', (e) => {
   );
 });
 
-// cache-first for same-origin, network fallback (and update cache)
+// network-first for same-origin: always fresh online, cache fallback offline
 self.addEventListener('fetch', (e) => {
   const req = e.request;
   if (req.method !== 'GET' || new URL(req.url).origin !== location.origin) return;
   e.respondWith(
-    caches.match(req).then((hit) => hit || fetch(req).then((res) => {
+    fetch(req).then((res) => {
       const copy = res.clone();
       caches.open(CACHE).then((c) => c.put(req, copy)).catch(() => {});
       return res;
-    }).catch(() => caches.match('index.html')))
+    }).catch(() => caches.match(req).then((hit) => hit || caches.match('index.html')))
   );
 });

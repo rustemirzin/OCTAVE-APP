@@ -261,7 +261,7 @@ svg{width:1.2em;height:1.2em;vertical-align:-.18em;flex:0 0 auto}
   height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;
   padding:0 30px 48px;text-align:center;position:relative;overflow:hidden;
 }
-.onb-glow{position:absolute;inset:0;background:radial-gradient(420px 380px at 50% 30%,rgba(217,182,95,.16),transparent 62%)}
+.onb-glow{position:absolute;inset:0;pointer-events:none;background:radial-gradient(420px 380px at 50% 30%,rgba(217,182,95,.16),transparent 62%)}
 .onb-omega{
   font-family:'Times New Roman',serif;font-size:74px;color:var(--gold-2);
   width:124px;height:124px;display:grid;place-items:center;margin-bottom:26px;
