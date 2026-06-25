@@ -599,3 +599,15 @@ svg{width:1.2em;height:1.2em;vertical-align:-.18em;flex:0 0 auto}
   .device-screen{border-radius:0}
   .device-home{display:none}
 }
+
+/* installed as a web app (home screen / standalone) — full-bleed, hide the fake chrome */
+@media (display-mode:standalone),(display-mode:fullscreen){
+  .stage{padding:0}
+  .stage-head,.stage-foot{display:none}
+  .device{width:100vw;height:100dvh;max-height:none;border-radius:0;padding:0;box-shadow:none}
+  .device-notch,.device-home{display:none}
+  .device-screen{border-radius:0;padding-top:env(safe-area-inset-top)}
+  .statusbar{display:none}
+  .tabbar{padding-bottom:max(8px,env(safe-area-inset-bottom))}
+  .onb{padding-bottom:max(40px,calc(env(safe-area-inset-bottom) + 26px))}
+}
