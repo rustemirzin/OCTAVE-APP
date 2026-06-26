@@ -90,6 +90,8 @@ svg{width:1.2em;height:1.2em;vertical-align:-.18em;flex:0 0 auto}
   padding:7px 14px;border-radius:999px;
 }
 .stage-foot{font-size:11px;color:var(--tx-3);text-align:center;max-width:380px;padding-bottom:8px}
+.stage-admin{font-size:12.5px;font-weight:600;color:var(--gold-2);padding:8px 16px;border:1px solid var(--gold-line);border-radius:999px;background:var(--gold-soft);transition:.15s}
+.stage-admin:active{transform:scale(.97)}
 
 /* ---------- device ---------- */
 .device-wrap{display:flex;justify-content:center}

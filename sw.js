@@ -1,7 +1,8 @@
 // O.C.T.A.V.E. demo — minimal offline service worker
-const CACHE = 'octave-demo-v3';
+const CACHE = 'octave-demo-v4';
 const ASSETS = [
   '.', 'index.html', 'styles.css', 'app.js', 'manifest.webmanifest',
+  'admin.html', 'admin.css', 'admin.js',
   'icon-192.png', 'icon-512.png', 'icon-maskable-512.png', 'apple-touch-icon.png'
 ];
 

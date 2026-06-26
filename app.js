@@ -934,6 +934,7 @@ VIEWS.menu = () => {
     ['doc','База знаний','', "OCT.nav('knowledge',null,'profile')"],
     ['gear','Настройки','', "OCT.nav('settings',null,'profile')"],
     ['life','Поддержка','', "OCT.toast('Чат с поддержкой сообщества')"],
+    ['shield','Кабинет администрации','Демо для управляющих сообщества', "location.href='admin.html'"],
   ];
   return { html:`<div class="screen">
     ${header('Меню',{ back:true })}

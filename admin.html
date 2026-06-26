@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#08080A" />
+  <meta name="description" content="O.C.T.A.V.E. — кабинет управляющего сообществом: аналитика, участники, кандидаты, репутация, сделки, финансы, роли и доступы." />
+  <title>O.C.T.A.V.E. — кабинет администрации</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin.css" />
+  <link rel="icon" type="image/png" href="icon-192.png" />
+</head>
+<body>
+  <div class="admin" id="admin">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <span class="omega">Ω</span>
+        <div><b>OCTAVE</b><span>Кабинет администрации</span></div>
+      </div>
+      <nav class="nav" id="nav"><!-- nav renders here --></nav>
+      <a class="back-app" href="index.html">← Открыть приложение участника</a>
+      <div class="side-user" id="sideUser"></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="burger" id="burger" aria-label="Меню"></button>
+        <h1 id="pageTitle">Обзор</h1>
+        <div class="top-search"><span id="searchIco"></span><input placeholder="Поиск по участникам, сделкам, городам…" id="topSearch" /></div>
+        <button class="top-ic dot" id="bellBtn" aria-label="Уведомления"></button>
+      </header>
+      <div class="content" id="view"><!-- view renders here --></div>
+    </main>
+  </div>
+
+  <div class="scrim" id="scrim"></div>
+  <div class="toast" id="toast"></div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
