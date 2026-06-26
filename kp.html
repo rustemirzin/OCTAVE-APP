@@ -48,7 +48,7 @@ h1,h2,h3{margin:0;letter-spacing:-.01em}
 .panel.soft{background:linear-gradient(150deg,rgba(217,182,95,.08),rgba(20,20,23,.5))}
 
 /* tariffs */
-.tariffs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:start}
+.tariffs{display:grid;grid-template-columns:repeat(auto-fit,minmax(228px,1fr));gap:16px;align-items:start}
 .tar{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px 22px;display:flex;flex-direction:column;position:relative;height:100%}
 .tar.best{border-color:var(--gold-line);background:linear-gradient(160deg,rgba(217,182,95,.10),rgba(20,20,23,.5));box-shadow:0 30px 60px -34px rgba(217,182,95,.5)}
 .tar .ribbon{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--gold-grad);color:#241a06;font-size:11px;font-weight:800;padding:5px 13px;border-radius:999px;letter-spacing:.04em;white-space:nowrap}
@@ -136,7 +136,7 @@ h1,h2,h3{margin:0;letter-spacing:-.01em}
     <p class="lead">Закрытая цифровая экосистема для участников: надёжный мессенджер, нетворкинг, репутация, ИИ-рекомендации знакомств, форум-группы, мероприятия и кабинет участника — с управляющей админ-панелью.</p>
     <div class="meta-row">
       <span class="chip">Старт: <b>~25 участников</b>, растёт</span>
-      <span class="chip">Чат: <b>надёжный real-time (уровень Telegram по ядру)</b></span>
+      <span class="chip">Чат: <b>быстрый и надёжный, сообщения не теряются</b></span>
       <span class="chip">Оплата: <b>предоплата + по этапам</b></span>
       <span class="chip">Web + <b>приложение на телефон (PWA)</b></span>
     </div>
@@ -199,7 +199,7 @@ h1,h2,h3{margin:0;letter-spacing:-.01em}
         <div class="sub">Коробка: <b>от 360 000 ₽</b><br/>Поддержка: <b>от 12 000 ₽/мес</b><br/>Срок: <b>4–6 недель</b></div>
         <ul class="feat">
           <li><b>Всё из «Лайт», плюс:</b></li>
-          <li class="star">Надёжный мессенджер: личные и групповые чаты, real-time, без потери сообщений — уровень Telegram/WhatsApp по ядру</li>
+          <li class="star">Надёжный мессенджер: личные и групповые чаты, мгновенная доставка, сообщения не теряются и видны только участникам</li>
           <li>Форум-группы и «восьмёрки» с управлением</li>
           <li>Запросы участников («ищу…») + отклики</li>
           <li>Воронка вступления: заявка → одобрение</li>
@@ -229,6 +229,25 @@ h1,h2,h3{margin:0;letter-spacing:-.01em}
         <div class="cover-pct">Покрытие ТЗ ≈ 82%<div class="bar"><i style="width:82%"></i></div></div>
       </div>
 
+      <!-- Платформа -->
+      <div class="tar">
+        <h3>Платформа</h3>
+        <div class="for">Максимум ТЗ: глубокий ИИ, география, безопасность — под кратный рост.</div>
+        <div class="price"><div class="from">разработка от</div><div class="val">1 200 000 ₽</div><div class="per">индивидуально · поэтапно</div></div>
+        <div class="sub">Коробка: <b>от 1 800 000 ₽</b><br/>Поддержка: <b>от 45 000 ₽/мес</b><br/>Срок: <b>4–6 месяцев</b></div>
+        <ul class="feat">
+          <li><b>Всё из «Сообщество», плюс:</b></li>
+          <li>Умный семантический поиск (естественным языком)</li>
+          <li>Глубокий ИИ: подбор и риск-флаги</li>
+          <li>География: города, страны, отделения, сенаторы</li>
+          <li>Расширенная приватность и контроль доступа</li>
+          <li>Усиленная безопасность: аудит, антифрод-сигналы, пентест</li>
+          <li>Архитектурный задел под десятки тысяч участников</li>
+          <li class="off">Опционально: escrow, нативные iOS/Android</li>
+        </ul>
+        <div class="cover-pct">Покрытие ТЗ ≈ 95%<div class="bar"><i style="width:95%"></i></div></div>
+      </div>
+
     </div>
     <p class="note">Цены указаны «от» и финализируются после согласования объёма. Тяжёлые модули (см. «Опции и этапы») в базовые тарифы не входят. Оплата подписки — через лицензированного провайдера; персональные данные хранятся в РФ (152-ФЗ).</p>
   </section>
@@ -237,7 +256,7 @@ h1,h2,h3{margin:0;letter-spacing:-.01em}
   <section class="sec">
     <div class="sec-h">Мессенджер — отдельный надёжный модуль</div>
     <div class="panel">
-      <p class="muted" style="margin-top:0">Чат — одна из главных функций. Делаем его на уровне Telegram/WhatsApp <b>по ядру</b> (без лишних фич): быстро, безопасно, без потерь. Это не «строчка», а отдельный модуль с обязательным тестированием — заложен в тарифы «Клуб» и «Сообщество».</p>
+      <p class="muted" style="margin-top:0">Чат — одна из главных функций. Делаем его <b>быстрым, надёжным и привычным</b> (без лишних фич): сообщения не теряются, доставляются мгновенно и видны только участникам. Это не «строчка», а отдельный модуль с обязательным тестированием — заложен в тарифы «Клуб», «Сообщество» и «Платформа».</p>
       <div class="grid2" style="gap:14px;margin-top:16px">
         <div class="kpoint"><div class="ic">✓</div><div><b>Не теряются.</b> Каждое сообщение сперва пишется в базу, затем подтверждается. Нет подтверждения — клиент дошлёт.</div></div>
         <div class="kpoint"><div class="ic">✓</div><div><b>Не тому.</b> Доступ к чату проверяется на сервере — посторонний не получит сообщения, даже зная ссылку.</div></div>
@@ -279,7 +298,7 @@ h1,h2,h3{margin:0;letter-spacing:-.01em}
         <tr><td>География: города / страны / сенаторы</td><td class="c no">—</td><td class="c no">—</td><td class="c part">опция</td></tr>
       </tbody>
     </table>
-    <p class="note">✓ — полноценно · ◐ — в упрощённом виде · опция — отдельным этапом · — — не входит.</p>
+    <p class="note">✓ — полноценно · ◐ — в упрощённом виде · опция — отдельным этапом · — — не входит. <b>«Платформа»</b> = всё из «Сообщества» + опции из раздела ниже (≈95% ТЗ).</p>
   </section>
 
   <!-- PAYMENT TERMS -->
@@ -344,7 +363,7 @@ h1,h2,h3{margin:0;letter-spacing:-.01em}
   <section class="sec">
     <div class="sec-h">Опции и этапы (по запросу)</div>
     <div class="panel">
-      <p class="muted small" style="margin-top:0">Подключаются отдельным этапом и за отдельный бюджет — поэтому не входят в базовые тарифы и не «съедают» их стоимость:</p>
+      <p class="muted small" style="margin-top:0">Входят в тариф «Платформа» или подключаются отдельным этапом к младшим тарифам — за отдельный бюджет, поэтому не «съедают» стоимость базовых тарифов:</p>
       <div style="margin-top:14px">
         <span class="tag">Умный семантический поиск (естественным языком)</span>
         <span class="tag">Глубокий ИИ: подбор и риск-флаги</span>
