@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Коммерческое предложение — O.C.T.A.V.E.</title>
+<meta name="description" content="Коммерческое предложение на разработку платформы закрытого сообщества O.C.T.A.V.E. — тарифы, покрытие ТЗ, SaaS и коробка." />
+<link rel="icon" type="image/png" href="icon-192.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --bg:#08080A; --bg2:#0C0C10; --card:#141417; --card2:#1A1A1F;
+  --line:rgba(255,255,255,.08); --line2:rgba(255,255,255,.14);
+  --tx:#F4F2EC; --tx2:#A2A0A8; --tx3:#6E6C76;
+  --gold1:#F1D894; --gold2:#D9B65F; --gold3:#B0832F;
+  --gold-grad:linear-gradient(135deg,#F4DD9B,#D9B65F 45%,#B0832F);
+  --gold-soft:rgba(217,182,95,.12); --gold-line:rgba(217,182,95,.34);
+  --green:#46C97E; --blue:#5AA9FF;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  font-family:'Manrope',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(1100px 640px at 50% -8%,#181822 0%,#0A0A0D 46%,#060608 100%);
+  color:var(--tx); -webkit-font-smoothing:antialiased; line-height:1.55;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:38px 22px 80px}
+.row{display:flex;gap:14px;flex-wrap:wrap}
+.muted{color:var(--tx2)} .small{font-size:13px} .gold{color:var(--gold1)}
+h1,h2,h3{margin:0;letter-spacing:-.01em}
+.sec{margin-top:56px}
+.sec-h{font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold2);margin-bottom:16px}
+
+/* hero */
+.hero{text-align:center;padding:18px 0 8px}
+.omega{font-family:'Times New Roman',serif;font-size:40px;color:var(--gold2);width:78px;height:78px;display:grid;place-items:center;margin:0 auto 18px;border-radius:20px;background:linear-gradient(160deg,rgba(217,182,95,.16),rgba(217,182,95,.02));border:1px solid var(--gold-line);box-shadow:0 18px 50px -22px rgba(217,182,95,.7)}
+.hero .kicker{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--tx3)}
+.hero h1{font-size:34px;font-weight:800;margin:10px 0 8px}
+.hero .lead{color:var(--tx2);max-width:680px;margin:14px auto 0;font-size:16px}
+.meta-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.chip{font-size:12.5px;font-weight:600;color:var(--tx2);background:var(--card);border:1px solid var(--line);padding:7px 13px;border-radius:999px}
+.chip b{color:var(--gold1)}
+
+/* intro card */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}
+.panel.soft{background:linear-gradient(150deg,rgba(217,182,95,.08),rgba(20,20,23,.5))}
+
+/* tariffs */
+.tariffs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:start}
+.tar{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px 22px;display:flex;flex-direction:column;position:relative;height:100%}
+.tar.best{border-color:var(--gold-line);background:linear-gradient(160deg,rgba(217,182,95,.10),rgba(20,20,23,.5));box-shadow:0 30px 60px -34px rgba(217,182,95,.5)}
+.tar .ribbon{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--gold-grad);color:#241a06;font-size:11px;font-weight:800;padding:5px 13px;border-radius:999px;letter-spacing:.04em;white-space:nowrap}
+.tar h3{font-size:21px;font-weight:800}
+.tar .for{color:var(--tx2);font-size:13px;margin-top:5px;min-height:38px}
+.price{margin:16px 0 4px}
+.price .from{font-size:12px;color:var(--tx3)}
+.price .val{font-size:27px;font-weight:800;color:var(--gold1);line-height:1.1}
+.price .per{font-size:13px;color:var(--tx2)}
+.tar .sub{font-size:13px;color:var(--tx2);border-top:1px solid var(--line);margin-top:14px;padding-top:12px}
+.tar .sub b{color:var(--tx)}
+.feat{list-style:none;padding:0;margin:16px 0 0;display:flex;flex-direction:column;gap:9px}
+.feat li{font-size:13.5px;display:flex;gap:9px;align-items:flex-start;color:var(--tx)}
+.feat li::before{content:'✓';color:var(--gold2);font-weight:800;flex:0 0 auto}
+.feat li.off{color:var(--tx3)}
+.feat li.off::before{content:'—';color:var(--tx3)}
+.cover-pct{margin-top:16px;font-size:12px;color:var(--tx3)}
+.bar{height:6px;border-radius:999px;background:rgba(255,255,255,.08);overflow:hidden;margin-top:6px}
+.bar>i{display:block;height:100%;background:var(--gold-grad);border-radius:999px}
+
+/* table */
+.tbl{width:100%;border-collapse:collapse;font-size:14px;overflow:hidden;border-radius:16px;border:1px solid var(--line)}
+.tbl th,.tbl td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line)}
+.tbl thead th{background:var(--card2);font-size:12px;letter-spacing:.04em;color:var(--tx2);font-weight:700}
+.tbl th.c,.tbl td.c{text-align:center;width:90px}
+.tbl tbody tr:last-child td{border-bottom:none}
+.tbl tbody tr:nth-child(even){background:rgba(255,255,255,.015)}
+.yes{color:var(--green);font-weight:800}
+.part{color:var(--gold2);font-weight:800}
+.no{color:var(--tx3)}
+.tbl td:first-child{font-weight:600}
+
+/* two-col */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.kpoint{display:flex;gap:11px;align-items:flex-start;font-size:14px}
+.kpoint .ic{width:32px;height:32px;border-radius:9px;background:var(--gold-soft);border:1px solid var(--gold-line);color:var(--gold2);display:grid;place-items:center;flex:0 0 auto;font-weight:800}
+.steps{counter-reset:s;display:flex;flex-direction:column;gap:12px}
+.step{display:flex;gap:13px;align-items:flex-start}
+.step .n{counter-increment:s;width:30px;height:30px;border-radius:50%;background:var(--gold-grad);color:#241a06;font-weight:800;display:grid;place-items:center;flex:0 0 auto}
+.step .n::before{content:counter(s)}
+.tag{display:inline-block;font-size:12px;font-weight:600;color:var(--gold1);background:var(--gold-soft);border:1px solid var(--gold-line);padding:5px 11px;border-radius:9px;margin:0 6px 6px 0}
+
+/* footer / cta */
+.cta{margin-top:56px;text-align:center;background:linear-gradient(150deg,rgba(217,182,95,.10),rgba(20,20,23,.5));border:1px solid var(--gold-line);border-radius:22px;padding:34px 24px}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--gold-grad);color:#241a06;font-weight:800;border:none;border-radius:14px;padding:14px 24px;font-size:15px;cursor:pointer;font-family:inherit;text-decoration:none}
+.contacts{margin-top:18px;color:var(--tx2);font-size:14px}
+.edit{color:var(--gold2);background:rgba(217,182,95,.08);border:1px dashed var(--gold-line);border-radius:6px;padding:1px 7px;font-size:13px}
+.note{font-size:12.5px;color:var(--tx3);margin-top:10px}
+.foot{margin-top:46px;border-top:1px solid var(--line);padding-top:20px;color:var(--tx3);font-size:12.5px;text-align:center}
+
+@media (max-width:860px){ .tariffs{grid-template-columns:1fr} .grid2{grid-template-columns:1fr} .hero h1{font-size:27px} .tbl{font-size:13px} .tbl th,.tbl td{padding:10px} }
+
+/* print → light, paper-friendly */
+.print-bar{position:fixed;right:16px;bottom:16px;z-index:10}
+@media print{
+  body{background:#fff;color:#111}
+  .print-bar{display:none}
+  .wrap{max-width:none;padding:0}
+  .panel,.tar,.cta{background:#fff !important;border-color:#ddd}
+  .tar.best{box-shadow:none}
+  .omega{box-shadow:none}
+  .hero h1,.tar h3,h2{color:#111}
+  .muted,.for,.sub,.cover-pct{color:#444 !important}
+  .price .val,.gold,.yes,.part{color:#9a7a1f !important}
+  .sec{break-inside:avoid}
+  .tar{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="omega">Ω</div>
+    <div class="kicker">Коммерческое предложение</div>
+    <h1>Платформа сообщества O.C.T.A.V.E.</h1>
+    <p class="lead">Закрытая цифровая экосистема для участников: нетворкинг, репутация, ИИ-рекомендации знакомств, форум-группы, мероприятия, обучение и кабинет участника — с управляющей админ-панелью.</p>
+    <div class="meta-row">
+      <span class="chip">Масштаб: <b>~300 участников</b> (с заделом на рост)</span>
+      <span class="chip">Формат: <b>SaaS и коробка</b></span>
+      <span class="chip">Устройства: <b>Web + приложение на телефон (PWA)</b></span>
+      <span class="chip">Готовое демо: <b>кликабельный прототип</b></span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="sec">
+    <div class="panel soft">
+      <div class="row" style="justify-content:space-between;align-items:center;gap:18px">
+        <div style="flex:1;min-width:240px">
+          <h2 style="font-size:20px">Что уже готово</h2>
+          <p class="muted" style="margin:8px 0 0">Интерактивный прототип приложения участника и кабинета администрации — можно посмотреть и «потыкать» прямо сейчас. На его основе ведётся разработка.</p>
+        </div>
+        <div class="row">
+          <a class="btn" href="index.html">📱 Демо участника</a>
+          <a class="btn" href="admin.html" style="background:var(--card2);color:var(--tx);border:1px solid var(--line2)">🛠 Кабинет администрации</a>
+        </div>
+      </div>
+      <p class="small muted" style="margin-top:16px;border-top:1px solid var(--line);padding-top:14px">
+        <b class="gold">Денежная модель:</b> в системе — только оплата подписки через платёжного провайдера (карты не хранятся у нас).
+        Пай, накопительная часть и доход <b>отображаются из защищённой Google-таблицы</b> — без оборота денег внутри системы.
+        Это снижает юридические риски и стоимость, сохраняя прозрачность для участника.
+      </p>
+    </div>
+  </section>
+
+  <!-- TARIFFS -->
+  <section class="sec">
+    <div class="sec-h">Тарифы</div>
+    <div class="tariffs">
+
+      <!-- Клуб -->
+      <div class="tar">
+        <h3>Клуб</h3>
+        <div class="for">Закрытый клуб «как есть»: быстрый старт ядра сообщества.</div>
+        <div class="price"><div class="from">разработка от</div><div class="val">390 000 ₽</div></div>
+        <div class="sub">Коробка: <b>от 590 000 ₽</b><br/>Поддержка/SaaS: <b>от 15 000 ₽/мес</b><br/>Срок: <b>3–6 недель</b></div>
+        <ul class="feat">
+          <li>Профили, звания и роли</li>
+          <li>Поиск и фильтры по участникам</li>
+          <li>Форум-группы и «восьмёрки»</li>
+          <li>Мероприятия с регистрацией</li>
+          <li>Базовый мессенджер</li>
+          <li>Заявка на вступление → одобрение</li>
+          <li>Рейтинг (ручной/полуавто)</li>
+          <li>Оплата подписки + пай из Google-таблицы</li>
+          <li>Реферальная ссылка</li>
+          <li>Базовая админ-панель</li>
+          <li>PWA: установка на телефон</li>
+          <li class="off">ИИ-рекомендации, голосовые, арбитраж</li>
+        </ul>
+        <div class="cover-pct">Покрытие ТЗ ≈ 60%<div class="bar"><i style="width:60%"></i></div></div>
+      </div>
+
+      <!-- Сообщество -->
+      <div class="tar best">
+        <span class="ribbon">Рекомендуем</span>
+        <h3>Сообщество</h3>
+        <div class="for">Полноценная экосистема сообщества с ИИ и репутацией.</div>
+        <div class="price"><div class="from">разработка от</div><div class="val">990 000 ₽</div></div>
+        <div class="sub">Коробка: <b>от 1 490 000 ₽</b><br/>Поддержка/SaaS: <b>от 35 000 ₽/мес</b><br/>Срок: <b>2–4 месяца</b></div>
+        <ul class="feat">
+          <li><b>Всё из «Клуб», плюс:</b></li>
+          <li>Полная воронка вступления (поручительство, собеседование, статусы СБ)</li>
+          <li>ИИ-рекомендации знакомств с пояснением «почему»</li>
+          <li>Авто-рейтинг (trust score) из активности</li>
+          <li>Отзывы, жалобы, арбитраж</li>
+          <li>Мессенджер: голосовые и вложения</li>
+          <li>Обучение и база знаний</li>
+          <li>Push-уведомления, QR-checkin на событиях</li>
+          <li>Расширенная админка с аналитикой</li>
+        </ul>
+        <div class="cover-pct">Покрытие ТЗ ≈ 82%<div class="bar"><i style="width:82%"></i></div></div>
+      </div>
+
+      <!-- Платформа -->
+      <div class="tar">
+        <h3>Платформа</h3>
+        <div class="for">Максимум возможностей ТЗ для растущего сообщества.</div>
+        <div class="price"><div class="from">разработка от</div><div class="val">1 900 000 ₽</div></div>
+        <div class="sub">Коробка: <b>от 2 700 000 ₽</b><br/>Поддержка/SaaS: <b>от 70 000 ₽/мес</b><br/>Срок: <b>5–8 месяцев</b></div>
+        <ul class="feat">
+          <li><b>Всё из «Сообщество», плюс:</b></li>
+          <li>Умный семантический поиск (естественным языком)</li>
+          <li>Глубокий ИИ: подбор и риск-флаги</li>
+          <li>География: города, страны, отделения, сенаторы</li>
+          <li>Расширенная приватность и контроль доступа</li>
+          <li>Полные протоколы встреч и аналитика групп</li>
+          <li>Архитектурный задел под рост</li>
+          <li>Усиленная безопасность (аудит, антифрод-сигналы)</li>
+        </ul>
+        <div class="cover-pct">Покрытие ТЗ ≈ 92%<div class="bar"><i style="width:92%"></i></div></div>
+      </div>
+
+    </div>
+    <p class="note">Цены указаны «от» и финализируются после согласования объёма. Оплата подписки идёт через лицензированного платёжного провайдера; персональные данные хранятся в РФ (152-ФЗ).</p>
+  </section>
+
+  <!-- COVERAGE MATRIX -->
+  <section class="sec">
+    <div class="sec-h">Что входит в каждый тариф</div>
+    <table class="tbl">
+      <thead><tr><th>Возможность (по ТЗ)</th><th class="c">Клуб</th><th class="c">Сообщество</th><th class="c">Платформа</th></tr></thead>
+      <tbody>
+        <tr><td>Профили, звания, роли</td><td class="c yes">✓</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+        <tr><td>Поиск и фильтры</td><td class="c yes">✓</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+        <tr><td>Умный поиск (естеств. язык)</td><td class="c no">—</td><td class="c part">◐</td><td class="c yes">✓</td></tr>
+        <tr><td>ИИ-рекомендации знакомств</td><td class="c part">◐</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+        <tr><td>Форум-группы / «восьмёрки»</td><td class="c yes">✓</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+        <tr><td>Мероприятия + QR-checkin</td><td class="c part">◐</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+        <tr><td>Мессенджер (голосовые, вложения)</td><td class="c part">◐</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+        <tr><td>Воронка вступления (СБ, поручительство)</td><td class="c part">◐</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+        <tr><td>Репутация / trust score</td><td class="c part">◐</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+        <tr><td>Отзывы, жалобы, арбитраж</td><td class="c no">—</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+        <tr><td>Обучение и база знаний</td><td class="c part">◐</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+        <tr><td>Оплата подписки</td><td class="c yes">✓</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+        <tr><td>Пай / финансы (из Google-таблицы)</td><td class="c yes">✓</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+        <tr><td>География: города / страны / сенаторы</td><td class="c no">—</td><td class="c part">◐</td><td class="c yes">✓</td></tr>
+        <tr><td>Админ-панель и аналитика</td><td class="c part">◐</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+        <tr><td>Реферальная программа</td><td class="c yes">✓</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+        <tr><td>Безопасность: роли, 2FA, 152-ФЗ</td><td class="c part">◐</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+        <tr><td>Приложение на телефон (PWA)</td><td class="c yes">✓</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+      </tbody>
+    </table>
+    <p class="note">✓ — полноценно · ◐ — в упрощённом виде · — — не входит.</p>
+  </section>
+
+  <!-- SAAS vs BOX -->
+  <section class="sec">
+    <div class="sec-h">Два формата поставки</div>
+    <div class="grid2">
+      <div class="panel">
+        <h3 style="font-size:18px">☁️ SaaS — аренда</h3>
+        <p class="muted small" style="margin-top:8px">Мы размещаем и сопровождаем платформу, вы платите ежемесячно.</p>
+        <ul class="feat" style="margin-top:12px">
+          <li>Минимальные вложения на старте</li>
+          <li>Хостинг, обновления и безопасность — на нас</li>
+          <li>Быстрый запуск, всегда свежая версия</li>
+          <li class="off">Зависимость от поставщика, нет владения кодом</li>
+        </ul>
+        <div class="sub" style="border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:14px">Стоимость: <b class="gold">разработка + от 15 000 ₽/мес</b></div>
+      </div>
+      <div class="panel">
+        <h3 style="font-size:18px">📦 Коробка — покупка</h3>
+        <p class="muted small" style="margin-top:8px">Передаём исходный код и разворачиваем на вашем сервере. Можно ребрендинг (white-label).</p>
+        <ul class="feat" style="margin-top:12px">
+          <li>Полное владение кодом и данными</li>
+          <li>Размещение на вашей инфраструктуре</li>
+          <li>Без обязательной ежемесячной подписки</li>
+          <li class="off">Выше разовая стоимость, нужен ваш сервер</li>
+        </ul>
+        <div class="sub" style="border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:14px">Стоимость: <b class="gold">разово (×1,3–1,6) + поддержка по желанию</b></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUPPORT -->
+  <section class="sec">
+    <div class="sec-h">Что входит в поддержку</div>
+    <div class="panel">
+      <div class="grid2" style="gap:14px">
+        <div class="kpoint"><div class="ic">⛭</div><div>Хостинг и инфраструктура в РФ (152-ФЗ)</div></div>
+        <div class="kpoint"><div class="ic">🛡</div><div>Обновления безопасности и зависимостей</div></div>
+        <div class="kpoint"><div class="ic">💾</div><div>Резервные копии данных</div></div>
+        <div class="kpoint"><div class="ic">📈</div><div>Мониторинг и реакция на инциденты</div></div>
+        <div class="kpoint"><div class="ic">🔧</div><div>Пул часов на мелкие доработки</div></div>
+        <div class="kpoint"><div class="ic">📞</div><div>Сопровождение и консультации</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPTIONS / STAGES -->
+  <section class="sec">
+    <div class="sec-h">Опции и этапы (по запросу)</div>
+    <div class="panel">
+      <p class="muted small" style="margin-top:0">Подключаются отдельным этапом, когда сообщество растёт. Вынесены из базовых тарифов, т.к. требуют юридической обвязки или отдельного бюджета:</p>
+      <div style="margin-top:14px">
+        <span class="tag">Escrow-сделки (платформа-гарант) + платёжный партнёр</span>
+        <span class="tag">Полный финкабинет с оборотом денег</span>
+        <span class="tag">Нативные приложения iOS / Android</span>
+        <span class="tag">Глубокий ИИ на собственных данных</span>
+        <span class="tag">Масштаб 100 000+ участников</span>
+        <span class="tag">Пентест и аудит безопасности</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="sec">
+    <div class="sec-h">Как идёт работа</div>
+    <div class="panel">
+      <div class="steps">
+        <div class="step"><div class="n"></div><div><b>Согласование объёма.</b> Выбираем тариф, фиксируем модули и сроки.</div></div>
+        <div class="step"><div class="n"></div><div><b>Дизайн и прототип.</b> Уже готов — корректируем под финальные пожелания.</div></div>
+        <div class="step"><div class="n"></div><div><b>Разработка.</b> Поэтапно, с демонстрациями по неделям.</div></div>
+        <div class="step"><div class="n"></div><div><b>Подключение оплаты и данных.</b> Провайдер подписок + связка с Google-таблицей.</div></div>
+        <div class="step"><div class="n"></div><div><b>Запуск и сопровождение.</b> Развёртывание, обучение админов, поддержка.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta">
+    <h2 style="font-size:22px">Готовы обсудить?</h2>
+    <p class="muted" style="margin:8px 0 0">Посмотрите живое демо и выберите тариф — детали и точную смету согласуем под ваш объём.</p>
+    <div style="margin-top:18px"><a class="btn" href="index.html">Открыть демо приложения</a></div>
+    <div class="contacts">
+      <span class="edit">Исполнитель: ваше имя / компания</span> &nbsp;·&nbsp;
+      <span class="edit">телефон</span> &nbsp;·&nbsp;
+      <span class="edit">email</span>
+    </div>
+    <p class="note">Замените поля контактов на свои (в файле <code>kp.html</code>) перед отправкой.</p>
+  </div>
+
+  <div class="foot">
+    Коммерческое предложение носит ориентировочный характер. Итоговая стоимость и сроки фиксируются в договоре после согласования технического задания.
+    <br/>O.C.T.A.V.E. · {{год}}
+  </div>
+</div>
+
+<div class="print-bar"><button class="btn" onclick="window.print()">🖨 Сохранить в PDF</button></div>
+</body>
+</html>
